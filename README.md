@@ -42,6 +42,10 @@ python client.py
 
 This will start an interactive chat interface where you can ask questions about scientific papers.
 
+## Future updates
+
+This repository will change and will become a universal MCP client with multiple MCP servers support at the same time (maybe change it to a FastAPI-type client). Stay tuned !
+
 ## Credits
 
 Andy Brandt and his ArXiv server "mcp-simple-arxiv" : [Repository](https://github.com/andybrandt/mcp-simple-arxiv)

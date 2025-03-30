@@ -10,6 +10,7 @@ wheels/
 .venv
 .env
 example.txt
+tests/
 pyproject.toml
 .python-version
 uv.lock
