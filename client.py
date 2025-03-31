@@ -82,8 +82,8 @@ class MCPClient:
         } for tool in response.tools]
 
         response = self.groq.chat.completions.create(
-            model="llama-3.1-8b-instant",
-            max_tokens=1000,
+            model="llama-3.3-70b-versatile",
+            max_tokens=800,
             messages=messages,
             tools=available_tools
         )
@@ -113,7 +113,7 @@ class MCPClient:
                 })
 
                 response = self.groq.chat.completions.create(
-                    model="llama-3.1-8b-instant",
+                    model="llama-3.3-70b-versatile",
                     max_tokens=1000,
                     messages=messages
                 )
@@ -124,13 +124,13 @@ class MCPClient:
     async def chat_loop(self) -> None:
         """Run an interactive chat loop"""
         print("\nMCP Client Started!")
-        print("Type your queries or 'quit' to exit.")
+        print("Type your queries or 'quit/exit' to exit the client.")
         
         while True:
             try:
                 query = input("\n>>> ").strip()
                 
-                if query.lower() == 'quit':
+                if query.lower() == 'quit' or query.lower() == 'exit':
                     break
                     
                 response = await self.process_query(query)
